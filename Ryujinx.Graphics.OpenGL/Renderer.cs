@@ -97,7 +97,6 @@ namespace Ryujinx.Graphics.OpenGL
                 HwCapabilities.SupportsAstcCompression,
                 HwCapabilities.SupportsImageLoadFormatted,
                 HwCapabilities.SupportsNonConstantTextureOffset,
-                HwCapabilities.SupportsMismatchingViewFormat,
                 HwCapabilities.SupportsViewportSwizzle,
                 HwCapabilities.MaximumComputeSharedMemorySize,
                 HwCapabilities.MaximumSupportedAnisotropy,

@@ -5,7 +5,6 @@ namespace Ryujinx.Graphics.GAL
         public bool SupportsAstcCompression          { get; }
         public bool SupportsImageLoadFormatted       { get; }
         public bool SupportsNonConstantTextureOffset { get; }
-        public bool SupportsMismatchingViewFormat    { get; }
         public bool SupportsViewportSwizzle          { get; }
 
         public int   MaximumComputeSharedMemorySize { get; }
@@ -16,7 +15,6 @@ namespace Ryujinx.Graphics.GAL
             bool  supportsAstcCompression,
             bool  supportsImageLoadFormatted,
             bool  supportsNonConstantTextureOffset,
-            bool  supportsMismatchingViewFormat,
             bool  supportsViewportSwizzle,
             int   maximumComputeSharedMemorySize,
             float maximumSupportedAnisotropy,
@@ -25,7 +23,6 @@ namespace Ryujinx.Graphics.GAL
             SupportsAstcCompression          = supportsAstcCompression;
             SupportsImageLoadFormatted       = supportsImageLoadFormatted;
             SupportsNonConstantTextureOffset = supportsNonConstantTextureOffset;
-            SupportsMismatchingViewFormat    = supportsMismatchingViewFormat;
             SupportsViewportSwizzle          = supportsViewportSwizzle;
             MaximumComputeSharedMemorySize   = maximumComputeSharedMemorySize;
             MaximumSupportedAnisotropy       = maximumSupportedAnisotropy;

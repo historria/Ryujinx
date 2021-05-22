@@ -110,6 +110,8 @@ namespace Ryujinx.Graphics.OpenGL
             GL.ClearBuffer(OpenTK.Graphics.OpenGL.ClearBuffer.Color, index, colors);
 
             RestoreComponentMask(index);
+
+            _framebuffer.SignalModified();
         }
 
         public void ClearRenderTargetDepthStencil(float depthValue, bool depthMask, int stencilValue, int stencilMask)
@@ -152,6 +154,8 @@ namespace Ryujinx.Graphics.OpenGL
             {
                 GL.DepthMask(_depthMask);
             }
+
+            _framebuffer.SignalModified();
         }
 
         public void CopyBuffer(BufferHandle source, BufferHandle destination, int srcOffset, int dstOffset, int size)
@@ -1220,6 +1224,8 @@ namespace Ryujinx.Graphics.OpenGL
 
         private void PostDraw()
         {
+            _framebuffer?.SignalModified();
+
             if (_tfEnabled)
             {
                 for (int i = 0; i < Constants.MaxTransformFeedbackBuffers; i++)
